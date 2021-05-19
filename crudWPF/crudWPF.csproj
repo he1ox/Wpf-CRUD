@@ -61,6 +61,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\baseBLL.cs" />
     <Compile Include="PL\ConexionDataMYSQL.xaml.cs">
       <DependentUpon>ConexionDataMYSQL.xaml</DependentUpon>
     </Compile>

@@ -23,5 +23,10 @@ namespace crudWPF.PL
         {
             InitializeComponent();
         }
+
+        private void btnConectar(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Hola!");
+        }
     }
 }
