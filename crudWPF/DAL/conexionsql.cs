@@ -12,7 +12,7 @@ namespace crudWPF.DAL
         private string cadenaconexion;
         MySqlConnection conexion;
 
-        public string obtenerDatos(string sv,string puerto, string user, string passwd, string db)
+        public string SendingData(string sv,string puerto, string user, string passwd, string db)
         {
             this.cadenaconexion = $"server={sv}; port={puerto}; userid={user}; password={passwd}; database={db}";
             return cadenaconexion;
@@ -29,5 +29,19 @@ namespace crudWPF.DAL
             return this.cadenaconexion;
         }
 
+
+
+        public bool testBD()
+        {
+            try
+            {
+                EstablecerConexion();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
     }
 }

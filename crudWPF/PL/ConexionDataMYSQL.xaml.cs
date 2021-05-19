@@ -36,9 +36,12 @@ namespace crudWPF.PL
             string password = txtContrasena.Text;
             string database = txtNombreBD.Text;
 
-            conexion.obtenerDatos(servidor,port,usuario,password,database);
+            conexion.SendingData(servidor,port,usuario,password,database);
 
-            MessageBox.Show(conexion.MostrarDatos()); 
+            MessageBox.Show(conexion.MostrarDatos());
+
+
+            MessageBox.Show(conexion.testBD().ToString()); 
 
         }
 
