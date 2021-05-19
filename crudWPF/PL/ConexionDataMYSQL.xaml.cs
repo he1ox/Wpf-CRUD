@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
+using crudWPF.DAL;
+
 namespace crudWPF.PL
 {
     /// <summary>
@@ -19,14 +21,29 @@ namespace crudWPF.PL
     /// </summary>
     public partial class ConexionDataMYSQL : Window
     {
+        conexionsql conexion;
         public ConexionDataMYSQL()
         {
+            conexion = new conexionsql();
             InitializeComponent();
         }
 
         private void btnConectar(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Hola!");
+            string servidor = txtServidor.Text;
+            string port = txtPuerto.Text;
+            string usuario = txtUsuario.Text;
+            string password = txtContrasena.Text;
+            string database = txtNombreBD.Text;
+
+            conexion.obtenerDatos(servidor,port,usuario,password,database);
+
+            MessageBox.Show(conexion.MostrarDatos()); 
+
         }
+
+
+
+
     }
 }
