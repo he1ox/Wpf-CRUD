@@ -2,11 +2,9 @@ C:\Users\georg\source\repos\crudWPF\crudWPF\bin\Debug\crudWPF.exe.config
 C:\Users\georg\source\repos\crudWPF\crudWPF\bin\Debug\crudWPF.exe
 C:\Users\georg\source\repos\crudWPF\crudWPF\bin\Debug\crudWPF.pdb
 C:\Users\georg\source\repos\crudWPF\crudWPF\obj\Debug\crudWPF.csprojAssemblyReference.cache
-C:\Users\georg\source\repos\crudWPF\crudWPF\obj\Debug\MainWindow.g.cs
 C:\Users\georg\source\repos\crudWPF\crudWPF\obj\Debug\App.g.cs
 C:\Users\georg\source\repos\crudWPF\crudWPF\obj\Debug\crudWPF_MarkupCompile.cache
 C:\Users\georg\source\repos\crudWPF\crudWPF\obj\Debug\crudWPF_MarkupCompile.lref
-C:\Users\georg\source\repos\crudWPF\crudWPF\obj\Debug\MainWindow.baml
 C:\Users\georg\source\repos\crudWPF\crudWPF\obj\Debug\crudWPF.g.resources
 C:\Users\georg\source\repos\crudWPF\crudWPF\obj\Debug\crudWPF.Properties.Resources.resources
 C:\Users\georg\source\repos\crudWPF\crudWPF\obj\Debug\crudWPF.csproj.GenerateResource.cache
@@ -14,3 +12,5 @@ C:\Users\georg\source\repos\crudWPF\crudWPF\obj\Debug\crudWPF.csproj.CoreCompile
 C:\Users\georg\source\repos\crudWPF\crudWPF\obj\Debug\crudWPF.exe
 C:\Users\georg\source\repos\crudWPF\crudWPF\obj\Debug\crudWPF.pdb
 C:\Users\georg\source\repos\crudWPF\crudWPF\obj\Debug\App.baml
+C:\Users\georg\source\repos\crudWPF\crudWPF\obj\Debug\PL\ConexionDataMYSQL.g.cs
+C:\Users\georg\source\repos\crudWPF\crudWPF\obj\Debug\PL\ConexionDataMYSQL.baml
