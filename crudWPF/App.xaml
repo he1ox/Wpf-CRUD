@@ -4,10 +4,22 @@
              xmlns:local="clr-namespace:crudWPF"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
+        <!--Añade una fuente custom, descargada de Google Web Fonts-->
         <Style x:Key="CustomFont">
             <Setter Property="TextElement.FontFamily"
                     Value="/Fonts/#Roboto">
             </Setter>
         </Style>
+
+        
+        <!--Le da un efecto de bordes redondos a un button-->
+        <Style TargetType="Button" x:Key="RoundButton">
+            <Style.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5" />
+                </Style>
+            </Style.Resources>
+        </Style>
+
     </Application.Resources>
 </Application>
