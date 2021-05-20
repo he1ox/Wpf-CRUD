@@ -7,7 +7,8 @@
         mc:Ignorable="d"
         Title="choosingAction" Height="300" Width="800"
         WindowStyle="None"
-        ResizeMode="NoResize">
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen">
     <Grid>
 
 
@@ -21,7 +22,7 @@
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
 
-        <Grid Background="#89119d"
+        <Grid x:Name="encabezado" Background="#89119d"
               Grid.ColumnSpan="2">
 
             <Grid.ColumnDefinitions>
@@ -30,13 +31,20 @@
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
 
-            <TextBlock Text="CONTROL TIENDA"
+            <TextBlock Text="CONTROL DE TIENDA"
                        Style="{StaticResource stockFont}"
-                       Grid.Column="1"
+                       FontFamily="/Fonts/#archivo"
+                       FontWeight="Black"
+                       Grid.Column="0"
+                       Grid.ColumnSpan="3"
                        HorizontalAlignment="Center"
                        VerticalAlignment="Center"
                        FontSize="40"
-                       Foreground="#ffce00"/>
+                       Foreground="#ffce00">
+                <TextBlock.Effect>
+                    <DropShadowEffect/>
+                </TextBlock.Effect>
+            </TextBlock>
 
         </Grid>
 
@@ -129,6 +137,20 @@
                                Foreground="#ffce00"/>
                 </StackPanel>
             </Button>
+
+            <TextBlock Text="Elige una opción"
+                       Style="{StaticResource stockFont}"
+                       VerticalAlignment="Top"
+                       FontFamily="/Fonts/#archivo"
+                       FontWeight="SemiBold"
+                       HorizontalAlignment="Center"
+                       Grid.Column="3"
+                       Grid.ColumnSpan="3"
+                       Grid.Row="6" >
+                <TextBlock.Effect>
+                    <DropShadowEffect/>
+                </TextBlock.Effect>
+            </TextBlock>
 
         </Grid>
 
