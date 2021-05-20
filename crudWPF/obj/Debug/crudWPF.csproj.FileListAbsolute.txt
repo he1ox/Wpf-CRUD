@@ -39,3 +39,5 @@ C:\Users\georg\source\repos\crudWPF\crudWPF\bin\Debug\System.Runtime.CompilerSer
 C:\Users\georg\source\repos\crudWPF\crudWPF\obj\Debug\crudWPF.csproj.CopyComplete
 C:\Users\georg\source\repos\crudWPF\crudWPF\obj\Debug\PL\choosingAction.g.cs
 C:\Users\georg\source\repos\crudWPF\crudWPF\obj\Debug\PL\choosingAction.baml
+C:\Users\georg\source\repos\crudWPF\crudWPF\obj\Debug\PL\VentanaProveedores.g.cs
+C:\Users\georg\source\repos\crudWPF\crudWPF\obj\Debug\PL\VentanaProveedores.baml

@@ -112,6 +112,9 @@
     <Compile Include="PL\ConexionDataMYSQL.xaml.cs">
       <DependentUpon>ConexionDataMYSQL.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PL\VentanaProveedores.xaml.cs">
+      <DependentUpon>VentanaProveedores.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -139,13 +142,21 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="resources\prvBorrar.png" />
+    <Resource Include="resources\prvModificar.png" />
+    <Resource Include="resources\stop.png" />
+  </ItemGroup>
   <ItemGroup>
     <Page Include="PL\choosingAction.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="PL\ConexionDataMYSQL.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PL\VentanaProveedores.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
