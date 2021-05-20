@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:crudWPF.PL"
         mc:Ignorable="d"
         Title="Conexion a Base de Datos" Height="649.009" Width="500" Background="#9c27b0" ResizeMode="NoResize">
-    <Grid>
+    <Grid Margin="0,0,0,0">
 
 
         <TextBlock HorizontalAlignment="Center"  TextWrapping="Wrap" Text="INGRESO A LA BASE DE DATOS" 
@@ -15,7 +15,7 @@
         <!--end Encabezado-->
 
         <TextBlock HorizontalAlignment="Left" Margin="80,100,0,0" TextWrapping="Wrap" Text="SERVIDOR" VerticalAlignment="Top"
-                   FontFamily="IMPACT" FontWeight="Light"  Foreground="#fff" FontSize="20"/>
+                   Style="{StaticResource stockFont}"/>
 
         <TextBox Name="txtServidor"  HorizontalAlignment="Left" Height="31" Margin="80,129,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="313"
                  Style="{DynamicResource RoundTxtBox}" VerticalContentAlignment="Center" Background="#89119d" BorderBrush="#FFF" BorderThickness="2"
@@ -24,7 +24,7 @@
 
 
         <TextBlock HorizontalAlignment="Left" Margin="80,187,0,0" TextWrapping="Wrap" Text="PUERTO" VerticalAlignment="Top"
-                   FontFamily="IMPACT" FontWeight="Light"  Foreground="#fff" FontSize="20"/>
+                   Style="{StaticResource stockFont}"/>
 
         <TextBox x:Name="txtPuerto" HorizontalAlignment="Left" Height="31" Margin="80,216,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="312"
                  Style="{DynamicResource RoundTxtBox}" VerticalContentAlignment="Center" Background="#89119d" BorderBrush="#FFF" BorderThickness="2"
@@ -32,7 +32,7 @@
         <!--end Puerto y TxtBox-->
 
         <TextBlock HorizontalAlignment="Left" Margin="80,272,0,0" TextWrapping="Wrap" Text="USUARIO" VerticalAlignment="Top"
-                   FontFamily="IMPACT" FontWeight="Light"  Foreground="#fff" FontSize="20"/>
+                   Style="{StaticResource stockFont}"/>
 
         <TextBox x:Name="txtUsuario" HorizontalAlignment="Left" Height="31" Margin="81,301,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="312"
                  Style="{DynamicResource RoundTxtBox}" VerticalContentAlignment="Center" Background="#89119d" BorderBrush="#FFF" BorderThickness="2"
@@ -40,7 +40,7 @@
         <!--end Usuario y Txtbox-->
 
         <TextBlock HorizontalAlignment="Left" Margin="80,356,0,0" TextWrapping="Wrap" Text="CONTRASEÑA" VerticalAlignment="Top"
-                   FontFamily="IMPACT" FontWeight="Light"  Foreground="#fff" FontSize="20"/>
+                   Style="{StaticResource stockFont}"/>
 
         <TextBox x:Name="txtContrasena" HorizontalAlignment="Left" Height="31" Margin="80,385,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="312"
                  Style="{DynamicResource RoundTxtBox}" VerticalContentAlignment="Center" Background="#89119d" BorderBrush="#FFF" BorderThickness="2"
@@ -48,16 +48,18 @@
         <!--end pass y txtbox-->
 
         <TextBlock HorizontalAlignment="Left" Margin="80,435,0,0" TextWrapping="Wrap" Text="NOMBRE DE LA BASE DE DATOS" VerticalAlignment="Top"
-                   FontFamily="IMPACT" FontWeight="Light"  Foreground="#fff" FontSize="20"/>
+                   Style="{StaticResource stockFont}"/>
 
         <TextBox x:Name="txtNombreBD" HorizontalAlignment="Left" Height="31" Margin="80,464,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="312"
                  Style="{DynamicResource RoundTxtBox}" VerticalContentAlignment="Center" Background="#89119d" BorderBrush="#FFF" BorderThickness="2"
                  FontFamily="Roboto" FontWeight="ExtraLight" Foreground="#FFF" FontSize="14"/>
         <!--end bd name y txtbox-->
+        <Button x:Name="botonConectar" Content="CONECTAR" HorizontalAlignment="Left" Margin="151,521,0,0" VerticalAlignment="Top" Width="160" Height="43"
+                Style="{DynamicResource RoundButton}" FontFamily="IMPACT" FontSize="20" Background="#89119d" BorderBrush="#fff" 
+                Foreground="#ffce00" BorderThickness="3" Click="btnConexion" />
 
-        <Button Content="CONECTAR" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="275" Height="45" Margin="99,0,120,41" 
-                Background="#9c27b0" Foreground="#ffce00" FontFamily="IMPACT" FontSize="20" Style="{DynamicResource RoundButton}" 
-                BorderBrush="#FFF" BorderThickness="2" Cursor="Hand"  Click="btnConectar" x:Name="btnConexion"/>
+        
+        
         <!--end button Conectar-->
     </Grid>
 </Window>

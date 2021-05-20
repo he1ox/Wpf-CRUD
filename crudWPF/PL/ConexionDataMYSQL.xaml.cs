@@ -28,7 +28,8 @@ namespace crudWPF.PL
             InitializeComponent();
         }
 
-        private void btnConectar(object sender, RoutedEventArgs e)
+        
+        private void btnConexion(object sender, RoutedEventArgs e)
         {
             string servidor = txtServidor.Text;
             string port = txtPuerto.Text;
@@ -36,17 +37,12 @@ namespace crudWPF.PL
             string password = txtContrasena.Text;
             string database = txtNombreBD.Text;
 
-            conexion.SendingData(servidor,port,usuario,password,database);
+            conexion.SendingData(servidor, port, usuario, password, database);
 
             MessageBox.Show(conexion.MostrarDatos());
 
 
-            MessageBox.Show(conexion.testBD().ToString()); 
-
+            MessageBox.Show(conexion.testBD().ToString());
         }
-
-
-
-
     }
 }
