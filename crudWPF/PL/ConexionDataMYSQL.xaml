@@ -56,10 +56,14 @@
         <!--end bd name y txtbox-->
         <Button x:Name="botonConectar" Content="CONECTAR" HorizontalAlignment="Left" Margin="151,521,0,0" VerticalAlignment="Top" Width="160" Height="43"
                 Style="{DynamicResource RoundButton}" FontFamily="IMPACT" FontSize="20" Background="#89119d" BorderBrush="#fff" 
-                Foreground="#ffce00" BorderThickness="3" Click="btnConexion" />
+                Foreground="#ffce00" BorderThickness="3" Click="btnConexion" >
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
 
-        
-        
+
+
         <!--end button Conectar-->
     </Grid>
 </Window>

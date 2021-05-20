@@ -37,3 +37,5 @@ C:\Users\georg\source\repos\crudWPF\crudWPF\bin\Debug\System.Memory.xml
 C:\Users\georg\source\repos\crudWPF\crudWPF\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\georg\source\repos\crudWPF\crudWPF\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\georg\source\repos\crudWPF\crudWPF\obj\Debug\crudWPF.csproj.CopyComplete
+C:\Users\georg\source\repos\crudWPF\crudWPF\obj\Debug\PL\choosingAction.g.cs
+C:\Users\georg\source\repos\crudWPF\crudWPF\obj\Debug\PL\choosingAction.baml

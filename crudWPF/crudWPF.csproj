@@ -106,6 +106,9 @@
   <ItemGroup>
     <Compile Include="BLL\baseBLL.cs" />
     <Compile Include="DAL\conexionsql.cs" />
+    <Compile Include="PL\choosingAction.xaml.cs">
+      <DependentUpon>choosingAction.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PL\ConexionDataMYSQL.xaml.cs">
       <DependentUpon>ConexionDataMYSQL.xaml</DependentUpon>
     </Compile>
@@ -139,10 +142,20 @@
     <Folder Include="Fonts\" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="PL\choosingAction.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="PL\ConexionDataMYSQL.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resources\proveedores.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resources\products.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
