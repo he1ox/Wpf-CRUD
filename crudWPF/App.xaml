@@ -36,14 +36,14 @@
         <!--Estilos por defecto para las fuentes en el programa-->
         <Style x:Key="stockFont">
             <Setter Property="TextElement.FontFamily" 
-                    Value="IMPACT">
+                    Value="/Fonts/#archivo">
             </Setter>
             <Setter Property="TextElement.FontSize"
                     Value="20" />
             <Setter Property="TextElement.Foreground"
                     Value="#fff" />
             <Setter Property="TextElement.FontWeight"
-                    Value="Light" />
+                    Value="Medium" />
         </Style>
         
         

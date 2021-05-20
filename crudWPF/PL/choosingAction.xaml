@@ -113,7 +113,7 @@
                 <StackPanel Orientation="Horizontal">
                     <Image Source="/resources/proveedores.png" Stretch="Uniform" Height="50" Width="60" />
 
-                    <TextBlock Text="PROVEEDORES" FontSize="30" 
+                    <TextBlock Text="PROVEEDORES" FontSize="20" 
                                Style="{StaticResource stockFont}" 
                                VerticalAlignment="Center"
                                Foreground="#ffce00"/>
@@ -131,7 +131,7 @@
                 <StackPanel Orientation="Horizontal">
                     <Image Source="/resources/products.png" Stretch="Uniform" Height="50" Width="60" />
 
-                    <TextBlock Text="PRODUCTOS" FontSize="30" 
+                    <TextBlock Text="PRODUCTOS" FontSize="25" 
                                Style="{StaticResource stockFont}" 
                                VerticalAlignment="Center"
                                Foreground="#ffce00"/>
