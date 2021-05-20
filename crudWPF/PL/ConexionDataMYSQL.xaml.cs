@@ -21,9 +21,11 @@ namespace crudWPF.PL
     /// </summary>
     public partial class ConexionDataMYSQL : Window
     {
-        conexionsql conexion;
+        conexionsql conexion; //conexion a la BD en mysql.
+        choosingAction ventanaAccion; // Ventana para elegir entre proveedores y productos
         public ConexionDataMYSQL()
         {
+            ventanaAccion = new choosingAction();
             conexion = new conexionsql();
             InitializeComponent();
         }
@@ -39,10 +41,20 @@ namespace crudWPF.PL
 
             conexion.SendingData(servidor, port, usuario, password, database);
 
-            MessageBox.Show(conexion.MostrarDatos());
+            bool success = conexion.testBD();
+
+            if (success!=false)
+            {
+                MessageBox.Show("Conexion Establecida","Te has conectado a la base de datos.",MessageBoxButton.OK, MessageBoxImage.Information);
+                ventanaAccion.Show();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Vuelve a intentarlo","No se pudo establecer una conexion", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
 
 
-            MessageBox.Show(conexion.testBD().ToString());
         }
     }
 }

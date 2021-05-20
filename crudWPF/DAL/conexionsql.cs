@@ -24,9 +24,10 @@ namespace crudWPF.DAL
             return this.conexion;
         }
 
-        public string MostrarDatos()
+        public void abrirConexion()
         {
-            return this.cadenaconexion;
+            conexion = new MySqlConnection(this.cadenaconexion);
+            conexion.Open();
         }
 
 
@@ -35,7 +36,7 @@ namespace crudWPF.DAL
         {
             try
             {
-                EstablecerConexion();
+                abrirConexion();
                 return true;
             }
             catch
