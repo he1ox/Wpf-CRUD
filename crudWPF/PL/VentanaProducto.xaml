@@ -255,7 +255,10 @@
             
         </Grid>
 
-
+        <Grid Grid.Row="3"
+              Margin="25">
+            <DataGrid></DataGrid>
+        </Grid>
 
     </Grid>
 </Window>
