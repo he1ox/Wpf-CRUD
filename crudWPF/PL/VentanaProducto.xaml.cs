@@ -19,9 +19,17 @@ namespace crudWPF.PL
     /// </summary>
     public partial class VentanaProducto : Window
     {
+        choosingAction ventanaPrincipal;
         public VentanaProducto()
         {
+            ventanaPrincipal = new choosingAction();
             InitializeComponent();
+        }
+
+        private void btnVolver(object sender, RoutedEventArgs e)
+        {
+            ventanaPrincipal.Show();
+            this.Close();
         }
     }
 }
