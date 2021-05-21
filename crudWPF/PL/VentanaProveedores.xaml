@@ -197,7 +197,16 @@
                         Style="{DynamicResource RoundButton}" Click="btnVolver">
 
                 <StackPanel Orientation="Horizontal">
-                    <Image Source="/resources/volver.png" Stretch="Uniform" Height="20" Width="49" />
+                    <Image Source="/resources/volver.png" Stretch="Uniform" Height="20" Width="49" RenderTransformOrigin="0.5,0.5" >
+                        <Image.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="180"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Image.RenderTransform>
+                    </Image>
 
                     <TextBlock Text="Volver" FontSize="15" 
                                Style="{StaticResource stockFont}" 

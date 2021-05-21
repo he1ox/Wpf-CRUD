@@ -112,6 +112,9 @@
     <Compile Include="PL\ConexionDataMYSQL.xaml.cs">
       <DependentUpon>ConexionDataMYSQL.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PL\VentanaProducto.xaml.cs">
+      <DependentUpon>VentanaProducto.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PL\VentanaProveedores.xaml.cs">
       <DependentUpon>VentanaProveedores.xaml</DependentUpon>
     </Compile>
@@ -156,6 +159,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="PL\VentanaProducto.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="PL\VentanaProveedores.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -169,6 +176,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="resources\volver.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resources\tienda.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

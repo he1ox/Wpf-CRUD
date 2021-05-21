@@ -41,3 +41,5 @@ C:\Users\georg\source\repos\crudWPF\crudWPF\obj\Debug\PL\choosingAction.g.cs
 C:\Users\georg\source\repos\crudWPF\crudWPF\obj\Debug\PL\choosingAction.baml
 C:\Users\georg\source\repos\crudWPF\crudWPF\obj\Debug\PL\VentanaProveedores.g.cs
 C:\Users\georg\source\repos\crudWPF\crudWPF\obj\Debug\PL\VentanaProveedores.baml
+C:\Users\georg\source\repos\crudWPF\crudWPF\obj\Debug\PL\VentanaProducto.g.cs
+C:\Users\georg\source\repos\crudWPF\crudWPF\obj\Debug\PL\VentanaProducto.baml
