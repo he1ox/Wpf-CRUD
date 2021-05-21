@@ -180,5 +180,11 @@
   <ItemGroup>
     <Resource Include="resources\tienda.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resources\itemadd.png" />
+    <Resource Include="resources\itemcancel.png" />
+    <Resource Include="resources\itemdelete.png" />
+    <Resource Include="resources\itemmodify.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
