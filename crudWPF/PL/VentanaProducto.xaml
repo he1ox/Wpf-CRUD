@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:crudWPF.PL"
         mc:Ignorable="d"
-        Title="VentanaProducto" Height="800" Width="1000"
+        Title="VentanaProducto" Height="900" Width="1000"
         WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize"
         WindowStyle="None">
@@ -16,6 +16,7 @@
             <RowDefinition Height="400"/>
             <RowDefinition Height="70"/>
             <RowDefinition />
+            <RowDefinition Height="70"/>
 
         </Grid.RowDefinitions>
 
@@ -257,8 +258,38 @@
 
         <Grid Grid.Row="3"
               Margin="25">
-            <DataGrid></DataGrid>
+            <DataGrid>
+                <!--datos de la base de datos aca-->
+            </DataGrid>
         </Grid>
 
+        <Grid Grid.Row="4">
+            <Button     Background="#FFF"
+                        Height="50"
+                        Width="150"
+                        Margin="0 0 25 0"
+                        HorizontalAlignment="Right"
+                        Style="{DynamicResource RoundButton}">
+
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/resources/volver.png" Stretch="Uniform" Height="30" Width="30" RenderTransformOrigin="0.5,0.5" >
+                        <Image.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="180"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Image.RenderTransform>
+                    </Image>
+
+                    <TextBlock Text="Volver" FontSize="20" 
+                               Style="{StaticResource stockFont}" 
+                               VerticalAlignment="Center"
+                               Foreground="Black"/>
+                </StackPanel>
+            </Button>
+        </Grid>
+        
     </Grid>
 </Window>
