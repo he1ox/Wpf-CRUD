@@ -28,5 +28,12 @@ namespace crudWPF.PL
         {
             this.Close();
         }
+
+        private void btnAbrirPrv(object sender, RoutedEventArgs e)
+        {
+            VentanaProveedores ventanaPrv =  new VentanaProveedores();
+            ventanaPrv.Show();
+            this.Close();
+        }
     }
 }

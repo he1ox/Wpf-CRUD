@@ -19,11 +19,19 @@ namespace crudWPF.PL
     /// </summary>
     public partial class VentanaProveedores : Window
     {
+        choosingAction ventanaPrincipial;
         public VentanaProveedores()
         {
+            ventanaPrincipial = new choosingAction();
             InitializeComponent();
             //dgvProveedores.Columns[0].Header = "ID";
             //dgvProveedores.Columns[1].Header = "Nombre";
+        }
+
+        private void btnVolver(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+            ventanaPrincipial.Show();
         }
     }
 }

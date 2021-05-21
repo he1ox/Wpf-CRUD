@@ -107,7 +107,7 @@
                     Grid.Row="2"
                     Grid.RowSpan="3"
                     Background="#FFF"
-                    Style="{DynamicResource RoundButton}">
+                    Style="{DynamicResource RoundButton}" Click="btnAbrirPrv" >
 
 
                 <StackPanel Orientation="Horizontal">
