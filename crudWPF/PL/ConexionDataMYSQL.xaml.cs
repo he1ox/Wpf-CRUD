@@ -52,9 +52,21 @@ namespace crudWPF.PL
             else
             {
                 MessageBox.Show("Vuelve a intentarlo","No se pudo establecer una conexion", MessageBoxButton.OK, MessageBoxImage.Warning);
+                limpiarEntradas();
             }
 
-
         }
+
+
+        private void limpiarEntradas()
+        {
+            txtContrasena.Text = "";
+            txtNombreBD.Text = "";
+            txtPuerto.Text = "";
+            txtPuerto.Text = "";
+            txtServidor.Text = "";
+            txtUsuario.Text = "";
+        }
+
     }
 }
