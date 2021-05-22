@@ -116,6 +116,7 @@ namespace crudWPF.PL
         {
             oProductoDAL.Agregar(RecolectarDatos());
             UpdateGrid();
+            LimpiarEntradas();
         }
 
 
@@ -124,6 +125,16 @@ namespace crudWPF.PL
             dgvProductos.DataContext = oProductoDAL.MostrarProductos().Tables[0];
         }
 
+        private void LimpiarEntradas()
+        {
+            txtCantidad.Clear();
+            txtDescripcion.Clear();
+            txtID.Clear();
+            txtNombre.Clear();
+            txtPrecio.Clear();
+            cbxProveedor.SelectedIndex = -1;
+            fechaPicker.SelectedDate = null;
+        }
 
 
     }
