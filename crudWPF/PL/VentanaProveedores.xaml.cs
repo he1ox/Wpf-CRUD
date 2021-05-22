@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using crudWPF.DAL;
+using crudWPF.BLL;
 
 namespace crudWPF.PL
 {
@@ -20,18 +22,37 @@ namespace crudWPF.PL
     public partial class VentanaProveedores : Window
     {
         choosingAction ventanaPrincipial;
+        proveedoresDAL oProveedor;
         public VentanaProveedores()
         {
-            ventanaPrincipial = new choosingAction();
             InitializeComponent();
-            //dgvProveedores.Columns[0].Header = "ID";
-            //dgvProveedores.Columns[1].Header = "Nombre";
+            oProveedor = new proveedoresDAL();
+            ventanaPrincipial = new choosingAction();
+            GridUpdate();
         }
+
+
+
 
         private void btnVolver(object sender, RoutedEventArgs e)
         {
             this.Close();
             ventanaPrincipial.Show();
         }
+
+
+
+
+        private void btnAgregar(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+
+        private void GridUpdate()
+        {
+            dgvProveedores.DataContext = oProveedor.MostrarProveedores().Tables[0];
+        }
+
     }
 }

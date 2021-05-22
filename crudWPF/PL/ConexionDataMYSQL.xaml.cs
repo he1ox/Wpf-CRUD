@@ -34,20 +34,7 @@ namespace crudWPF.PL
         
         private void btnConexion(object sender, RoutedEventArgs e)
         {
-            string servidor = txtServidor.Text;
-            string port = txtPuerto.Text;
-            string usuario = txtUsuario.Text;
-            string password = txtContrasena.Text;
-            string database = txtNombreBD.Text;
-
-
-            //Se envia los datos de conexion a la conexion, son utiles para asignarlos
-            //mediante el constructor de clase
-            conexion.SendingData(servidor, port, usuario, password, database);
-
-
             PruebaConexion();
-
         }
 
 

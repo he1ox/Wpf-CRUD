@@ -10,14 +10,15 @@ namespace crudWPF.DAL
 {
     class conexionsql
     {
-        private string cadenaconexion;
+        private string cadenaconexion = "server= localhost; port= 3306; userid = root; password = elmaspro123; database = jorgedb";
         MySqlConnection conexion;
 
-        public string SendingData(string sv,string puerto, string user, string passwd, string db)
-        {
-            this.cadenaconexion = $"server={sv}; port={puerto}; userid={user}; password={passwd}; database={db}";
-            return cadenaconexion;
-        }
+        //public string SendingData(string sv,string puerto, string user, string passwd, string db)
+        //{
+        //    this.cadenaconexion = $"server={sv}; port={puerto}; userid={user}; password={passwd}; database={db}";
+        //    return cadenaconexion;
+        //}
+
 
         public MySqlConnection EstablecerConexion()
         {
@@ -100,6 +101,31 @@ namespace crudWPF.DAL
             conexion = new MySqlConnection(this.cadenaconexion);
             conexion.Open();
         }
+
+
+        /// <summary>
+        /// metodo que ejecuta una consulta, esta clase maneja la apertura y clausura a la base de datos
+        /// </summary>
+        /// <param name="strComando"></param>
+        /// <returns></returns>
+        public DataTable consultaTablaDirecta(string strComando)
+        {
+            abrirConexion();
+            MySqlDataReader dr;
+            MySqlCommand comando = new MySqlCommand(strComando, conexion);
+
+            dr = comando.ExecuteReader();
+
+            var dataTable = new DataTable();
+
+            dataTable.Load(dr);
+
+            conexion.Close();
+            return dataTable;
+
+        }
+
+
 
         public bool testBD()
         {
