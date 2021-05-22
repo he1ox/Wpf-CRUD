@@ -31,5 +31,10 @@ namespace crudWPF.PL
             ventanaPrincipal.Show();
             this.Close();
         }
+
+        private void fechaPicker_CalendarClosed(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Fecha Ingresada.");
+        }
     }
 }

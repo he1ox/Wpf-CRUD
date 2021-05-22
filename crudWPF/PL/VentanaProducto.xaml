@@ -98,14 +98,26 @@
                            VerticalAlignment="Center" Height="24" Margin="0,10">
                 </TextBlock>
 
-                <TextBox Grid.Row="1"
+                <!--<TextBox Grid.Row="1"
                          Grid.Column="2"
                          Style="{DynamicResource RoundTxtBox}"
                          VerticalContentAlignment="Center"
                          FontSize="20"
                          FontFamily="#archivo"
                          FontWeight="Light">
-                </TextBox>
+                </TextBox>-->
+
+
+                <ComboBox Grid.Row="1"
+                          Grid.Column="2"
+                          VerticalAlignment="Center"
+                          FontSize="20"
+                          Padding="9"
+                          FontFamily="#archivo"
+                          FontWeight="Light"
+                          Style="{DynamicResource RoundCombobox}">
+                    
+                </ComboBox>
 
                 <TextBlock Grid.Row="2"
                            Text="Nombre:"
@@ -180,14 +192,28 @@
 
                 
                 <!--CAMBIAR POR UN DATAPICKER-->
-                <TextBox Grid.Row="7"
+                <!--<TextBox Grid.Row="7"
                          Grid.Column="2"
                          Style="{DynamicResource RoundTxtBox}"
                          VerticalContentAlignment="Center"
                          FontSize="20"
                          FontFamily="#archivo"
                          FontWeight="Light">
-                </TextBox>
+                </TextBox>-->
+
+
+                <DatePicker Grid.Row="7"
+                            Grid.Column="2"
+                            FontSize="20"
+                            VerticalAlignment="Center"
+                            FontFamily="#archivo"
+                            FontWeight="Bold"
+                            x:Name="fechaPicker"
+                            CalendarClosed="fechaPicker_CalendarClosed"
+                            >
+                    
+                </DatePicker>
+                
                 <!--CAMBIAR POR UN DATAPICKER-->
 
 

@@ -32,6 +32,15 @@
         </Style>
 
 
+        <!--Le da un efecto de bordes redondos a un combobox-->
+        <Style TargetType="ComboBox" x:Key="RoundCombobox">
+            <Style.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5" />
+                </Style>
+            </Style.Resources>
+        </Style>
+
 
         <!--Le da un efecto de bordes redondos a un datagrid-->
         <Style TargetType="DataGrid" x:Key="RoundDataGrid">
