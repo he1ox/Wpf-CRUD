@@ -115,7 +115,9 @@
                           Padding="9"
                           FontFamily="#archivo"
                           FontWeight="Light"
-                          Style="{DynamicResource RoundCombobox}">
+                          Style="{DynamicResource RoundCombobox}"
+                          x:Name="cbxProveedor"
+                          ItemsSource="{Binding}">
                     
                 </ComboBox>
 
