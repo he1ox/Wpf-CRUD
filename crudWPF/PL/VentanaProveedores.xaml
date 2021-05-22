@@ -59,7 +59,8 @@
                 <TextBox x:Name="txtID" Height="30" 
                          Width="200" 
                          Grid.Row="1"
-                         Style="{DynamicResource RoundTxtBox}">
+                         Style="{DynamicResource RoundTxtBox}"
+                         VerticalContentAlignment="Center">
 
                 </TextBox>
 
@@ -111,6 +112,7 @@
                          Grid.Row="1"
                          Grid.ColumnSpan="2"
                          HorizontalAlignment="Left"
+                         VerticalContentAlignment="Center"
                          Style="{DynamicResource RoundTxtBox}" Margin="0,6">
 
                 </TextBox>
@@ -128,6 +130,7 @@
                          Grid.Row="1"
                          Grid.Column="2"
                          HorizontalAlignment="Left"
+                         VerticalContentAlignment="Center"
                          Style="{DynamicResource RoundTxtBox}" Margin="0,6">
 
                 </TextBox>
@@ -138,7 +141,7 @@
                         Height="40"
                         Width="150"
                         HorizontalAlignment="Left"
-                        Style="{DynamicResource RoundButton}">
+                        Style="{DynamicResource RoundButton}" Click="btnModificar">
 
                     <StackPanel Orientation="Horizontal">
                         <Image Source="/resources/prvModificar.png" Stretch="Uniform" Height="28" Width="49" />
@@ -157,7 +160,7 @@
                         Height="40"
                         Width="150"
                         HorizontalAlignment="Left"
-                        Style="{DynamicResource RoundButton}">
+                        Style="{DynamicResource RoundButton}" Click="btnBorrar">
 
                     <StackPanel Orientation="Horizontal">
                         <Image Source="/resources/prvBorrar.png" Stretch="Uniform" Height="28" Width="49" />
@@ -175,7 +178,7 @@
                         Height="40"
                         Width="150"
                         HorizontalAlignment="Left"
-                        Style="{DynamicResource RoundButton}">
+                        Style="{DynamicResource RoundButton}" Click="btnCancelar">
 
                     <StackPanel Orientation="Horizontal">
                         <Image Source="/resources/stop.png" Stretch="Uniform" Height="28" Width="49" />
@@ -201,8 +204,13 @@
                       Height="165" 
                       Margin="0,10,0,0" 
                       VerticalAlignment="Top" 
-                      Width="740" />
+                      Width="740" 
+                      SelectedCellsChanged="dgvProveedores_SelectedCellsChanged"  
+                      >
 
+            </DataGrid>
+
+            
         </Grid>
 
 

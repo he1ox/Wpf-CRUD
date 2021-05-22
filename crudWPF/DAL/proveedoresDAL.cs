@@ -22,9 +22,24 @@ namespace crudWPF.DAL
 
         public DataSet MostrarProveedores()
         {
-            MySqlCommand SQLComando = new MySqlCommand("SELECT * FROM jorgedb.proveedores");
+            MySqlCommand SQLComando = new MySqlCommand("SELECT * FROM proveedores");
 
             return conexion.EjecutarSentencia(SQLComando);
+        }
+
+        public int Eliminar(proveedoresBLL oProveedorBLL)
+        {
+            conexion.execSinRetornoDatos("DELETE FROM  proveedores WHERE id = " + oProveedorBLL.id);
+
+            return 1;
+        }
+
+
+        public int Modificar(proveedoresBLL oProveedorBLL)
+        {
+            conexion.execSinRetornoDatos("UPDATE proveedores SET nombre = '" + oProveedorBLL.nombre + "',telefono = '" + oProveedorBLL.telefono+ "' WHERE id = " + oProveedorBLL.id);
+
+            return 1;
         }
 
 

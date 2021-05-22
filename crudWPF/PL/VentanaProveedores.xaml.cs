@@ -1,16 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 using crudWPF.DAL;
 using crudWPF.BLL;
 
@@ -43,13 +32,46 @@ namespace crudWPF.PL
 
 
 
-
         private void btnAgregar(object sender, RoutedEventArgs e)
         {
             oProveedor.Agregar(RecuperarInfo());
             MessageBox.Show($"{RecuperarInfo().nombre} ha sido agregado.","Proveedor");
             GridUpdate();
+            LimpiarEntradas();
         }
+
+
+
+        private void btnBorrar(object sender, RoutedEventArgs e)
+        {
+            bool opcion = MensajePregunta("Eliminar", txtID);
+            if (opcion!=false)
+            {
+                oProveedor.Eliminar(RecuperarInfo());
+                GridUpdate();
+                LimpiarEntradas();
+            }
+        }
+
+
+        private void btnModificar(object sender, RoutedEventArgs e)
+        {
+            bool opcionModificar = MensajePregunta("Modificar", txtID);
+            if (opcionModificar != false)
+            {
+                oProveedor.Modificar(RecuperarInfo());
+                GridUpdate();
+                LimpiarEntradas();
+            }
+        }
+
+
+        private void btnCancelar(object sender, RoutedEventArgs e)
+        {
+            LimpiarEntradas();
+        }
+
+
 
 
 
@@ -75,6 +97,48 @@ namespace crudWPF.PL
             return oProveedorBLL;
 
         }
+
+
+        private void LimpiarEntradas()
+        {
+            txtID.Text = "";
+            txtNombre.Text = "";
+            txtTelefono.Text = "";
+        }
+
+
+
+        private void dgvProveedores_SelectedCellsChanged(object sender, SelectedCellsChangedEventArgs e)
+        {
+            int indice = dgvProveedores.SelectedIndex;
+
+
+            //txtID.Text = dgvProveedores.SelectedIndex[1];
+
+            //MessageBox.Show(indice.ToString());
+        }
+
+    
+        private bool MensajePregunta(string opcion,TextBox txtbox)
+        {
+            string msj = $"Deseas {opcion} el proveedor con ID {txtbox.Text}?";
+            string msjcaption = $"{opcion} registro";
+
+            MessageBoxButton botones = MessageBoxButton.YesNo;
+
+            var result = MessageBox.Show(msj, msjcaption, botones, MessageBoxImage.Exclamation);
+
+            if (result == MessageBoxResult.Yes)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
+
         //End Funciones
     }
 }
