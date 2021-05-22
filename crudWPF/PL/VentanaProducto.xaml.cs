@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using crudWPF.DAL;
-
+using crudWPF.BLL;
 
 namespace crudWPF.PL
 {
@@ -55,5 +55,34 @@ namespace crudWPF.PL
             cbxProveedor.SelectedValuePath = "id";
         }
 
+        private productosBLL RecolectarDatos()
+        {
+            productosBLL oProductosBLL = new productosBLL();
+
+            int codigoProducto = 1;
+            int cant = 1;
+            int precio = 1;
+
+            int.TryParse(txtID.Text, out codigoProducto);
+            int.TryParse(txtCantidad.Text, out cant);
+            int.TryParse(txtPrecio.Text, out precio);
+
+            oProductosBLL.id = codigoProducto;
+            oProductosBLL.nombre = txtNombre.Text;
+            oProductosBLL.descripcion = txtDescripcion.Text;
+            oProductosBLL.precio = precio;
+            oProductosBLL.cantidad = cant;
+
+
+            int IDProveedor = 0;
+            int.TryParse(cbxProveedor.SelectedValue.ToString(), out IDProveedor);
+            oProductosBLL.proveedor = IDProveedor;
+
+        }
+
+        private void btnAgregar(object sender, RoutedEventArgs e)
+        {
+            //RecolectarDatos();
+        }
     }
 }

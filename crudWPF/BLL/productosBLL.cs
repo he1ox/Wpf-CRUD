@@ -14,5 +14,7 @@ namespace crudWPF.BLL
         public string descripcion { get; set; }
         public int precio { get; set; }
         public string fechaIngreso { get; set; }
+
+        public int proveedor { get; set; } 
     }
 }

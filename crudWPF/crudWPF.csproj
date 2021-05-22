@@ -108,6 +108,7 @@
     <Compile Include="BLL\productosBLL.cs" />
     <Compile Include="BLL\proveedoresBLL.cs" />
     <Compile Include="DAL\conexionsql.cs" />
+    <Compile Include="DAL\productosDAL.cs" />
     <Compile Include="DAL\proveedoresDAL.cs" />
     <Compile Include="PL\choosingAction.xaml.cs">
       <DependentUpon>choosingAction.xaml</DependentUpon>
