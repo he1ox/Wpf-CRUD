@@ -23,11 +23,15 @@ namespace crudWPF.PL
     {
         choosingAction ventanaPrincipal;
         proveedoresDAL oProveedorDAL;
+        productosDAL oProductoDAL;
+
         public VentanaProducto()
         {
             InitializeComponent();
+            oProductoDAL = new productosDAL();
             oProveedorDAL = new proveedoresDAL();
             ventanaPrincipal = new choosingAction();
+            UpdateGrid();
             MostrarProveedores();
         }
 
@@ -57,6 +61,7 @@ namespace crudWPF.PL
 
         private productosBLL RecolectarDatos()
         {
+            //conexionsql conexion = new conexionsql();
             productosBLL oProductosBLL = new productosBLL();
 
             int codigoProducto = 1;
@@ -78,11 +83,48 @@ namespace crudWPF.PL
             int.TryParse(cbxProveedor.SelectedValue.ToString(), out IDProveedor);
             oProductosBLL.proveedor = IDProveedor;
 
+
+
+            //Obtener fechaPicker
+            string fecha = fechaPicker.SelectedDate.ToString();
+            fecha = fecha.Replace("/", "-");
+            string fechaCorta = fecha.Substring(0, 10);
+
+            string fechaDia = fechaCorta.Substring(0, 2);
+            string fechaMes = fechaCorta.Substring(3, 2);
+            string fechaAnio = fechaCorta.Substring(6, 4);
+
+            string Fechas = $"{fechaAnio}-{fechaMes}-{fechaDia}";
+
+            //Se corta la cadena de texto para que tenga el formato de 
+            //yyyy-MM-dd
+
+            oProductosBLL.fechaIngreso = Fechas;
+
+            //Devuelve un objeto con los valores agregados desde los txtbox
+
+
+
+            return oProductosBLL;
+
         }
+
+
+
 
         private void btnAgregar(object sender, RoutedEventArgs e)
         {
-            //RecolectarDatos();
+            oProductoDAL.Agregar(RecolectarDatos());
+            UpdateGrid();
         }
+
+
+        private void UpdateGrid()
+        {
+            dgvProductos.DataContext = oProductoDAL.MostrarProductos().Tables[0];
+        }
+
+
+
     }
 }

@@ -64,7 +64,21 @@
             <Setter Property="TextElement.FontWeight"
                     Value="Medium" />
         </Style>
+
+
         
-        
+        <!--cambia el formato del datepicker para ingresarlo a mysql-->
+        <Style TargetType="{x:Type DatePickerTextBox}">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <TextBox x:Name="PART_TextBox"
+     Text="{Binding Path=SelectedDate, StringFormat='dd-MM-yyyy', 
+     RelativeSource={RelativeSource AncestorType={x:Type DatePicker}}}" />
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
     </Application.Resources>
 </Application>
