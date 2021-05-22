@@ -23,6 +23,7 @@ namespace crudWPF.PL
     {
         conexionsql conexion; //conexion a la BD en mysql.
         choosingAction ventanaAccion; // Ventana para elegir entre proveedores y productos
+
         public ConexionDataMYSQL()
         {
             ventanaAccion = new choosingAction();
@@ -39,27 +40,20 @@ namespace crudWPF.PL
             string password = txtContrasena.Text;
             string database = txtNombreBD.Text;
 
+
+            //Se envia los datos de conexion a la conexion, son utiles para asignarlos
+            //mediante el constructor de clase
             conexion.SendingData(servidor, port, usuario, password, database);
 
-            bool success = conexion.testBD();
 
-            if (success!=false)
-            {
-                MessageBox.Show("Conexion Establecida","Te has conectado a la base de datos.",MessageBoxButton.OK, MessageBoxImage.Information);
-                ventanaAccion.Show();
-                this.Close();
-            }
-            else
-            {
-                MessageBox.Show("Vuelve a intentarlo","No se pudo establecer una conexion", MessageBoxButton.OK, MessageBoxImage.Warning);
-                limpiarEntradas();
-            }
+            PruebaConexion();
 
         }
 
 
         private void limpiarEntradas()
         {
+            //Limpia las entradas de los textbox.
             txtContrasena.Text = "";
             txtNombreBD.Text = "";
             txtPuerto.Text = "";
@@ -67,6 +61,27 @@ namespace crudWPF.PL
             txtServidor.Text = "";
             txtUsuario.Text = "";
         }
+
+
+        private void PruebaConexion()
+        {
+            //Devuelve true o false dependiendo si se conecta o no, tambien muestra un mensaje en pantalla.
+            bool success = conexion.testBD();
+
+            if (success != false)
+            {
+                MessageBox.Show("Conexion Establecida", "Te has conectado a la base de datos.", MessageBoxButton.OK, MessageBoxImage.Information);
+                ventanaAccion.Show();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Vuelve a intentarlo", "No se pudo establecer una conexion", MessageBoxButton.OK, MessageBoxImage.Warning);
+                limpiarEntradas();
+            }
+        }
+
+
 
     }
 }
