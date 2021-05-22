@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,13 +25,81 @@ namespace crudWPF.DAL
             return this.conexion;
         }
 
+
+
+        /*INSERT , DELETE, UPDATE de informacion*/
+        public bool execSinRetornoDatos(string strComando)
+        {
+            try
+            {
+                MySqlCommand Comando = new MySqlCommand();
+
+
+                Comando.CommandText = strComando;
+                Comando.Connection = this.EstablecerConexion();
+                conexion.Open();
+                Comando.ExecuteNonQuery();
+                conexion.Close();
+
+                return true;
+            }
+            catch 
+            {
+                return false;
+            }
+        }
+
+        //Sobrecarga +1 (Acepta un comando instanciado de MySqlCommand)
+        public bool execSinRetornoDatos(MySqlCommand SQLComando)
+        {
+            try
+            {
+                MySqlCommand Comando = SQLComando;
+                Comando.Connection = this.EstablecerConexion();
+                conexion.Open();
+                Comando.ExecuteNonQuery();
+                conexion.Close();
+
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+
+        /* SELECT Devuelve info, util para el datagrid*/
+        public DataSet EjecutarSentencia(MySqlCommand SQLComando)
+        {
+            DataSet DS = new DataSet();
+            MySqlDataAdapter Adaptador = new MySqlDataAdapter();
+
+            try
+            {
+                MySqlCommand comando = new MySqlCommand();
+                comando = SQLComando;
+                comando.Connection = this.EstablecerConexion();
+                Adaptador.SelectCommand = comando;
+                conexion.Open();
+                Adaptador.Fill(DS);
+                conexion.Close();
+
+                return DS;
+            }
+            catch 
+            {
+                return DS;
+            }
+        }
+
+
+
         public void abrirConexion()
         {
             conexion = new MySqlConnection(this.cadenaconexion);
             conexion.Open();
         }
-
-
 
         public bool testBD()
         {
