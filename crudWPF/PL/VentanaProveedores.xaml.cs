@@ -45,13 +45,33 @@ namespace crudWPF.PL
 
         private void btnAgregar(object sender, RoutedEventArgs e)
         {
-
+            oProveedor.Agregar(RecuperarInfo());
+            MessageBox.Show($"{RecuperarInfo().nombre} ha sido agregado.","Proveedor");
+            GridUpdate();
         }
 
 
+        //Funciones
         private void GridUpdate()
         {
+            //Actualiza el datagrid cada vez que es llamado.
             dgvProveedores.DataContext = oProveedor.MostrarProveedores().Tables[0];
+        }
+
+        private proveedoresBLL RecuperarInfo()
+        {
+            //Obtiene los datos del txtbox, los obtiene de la clase proveedoresBLL,
+            //despues devuelve un objeto de la misma clase con los datos necesarios.
+            proveedoresBLL oProveedorBLL = new proveedoresBLL();
+
+            int ID = 0; int.TryParse(txtID.Text, out ID);
+
+            oProveedorBLL.id = ID;
+            oProveedorBLL.nombre = txtNombre.Text;
+            oProveedorBLL.telefono = txtTelefono.Text;
+
+            return oProveedorBLL;
+
         }
 
     }

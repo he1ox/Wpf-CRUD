@@ -56,7 +56,7 @@
                            VerticalAlignment="Bottom">
                 </TextBlock>
 
-                <TextBox Height="30" 
+                <TextBox x:Name="txtID" Height="30" 
                          Width="200" 
                          Grid.Row="1"
                          Style="{DynamicResource RoundTxtBox}">
@@ -102,18 +102,35 @@
                            Style="{StaticResource stockFont}" 
                            Grid.Row="0"
                            Grid.ColumnSpan="2"
+                           FontSize="20"
                            VerticalAlignment="Bottom">
                 </TextBlock>
 
-                <TextBox Height="30" 
-                         Width="525" 
+                <TextBox x:Name="txtNombre" Height="30" 
+                         Width="360" 
                          Grid.Row="1"
-                         Grid.ColumnSpan="3"
+                         Grid.ColumnSpan="2"
                          HorizontalAlignment="Left"
                          Style="{DynamicResource RoundTxtBox}" Margin="0,6">
 
                 </TextBox>
 
+                <TextBlock Text="Tel:" 
+                           Style="{StaticResource stockFont}" 
+                           Grid.Row="0"
+                           Grid.Column="2"
+                           FontSize="20"
+                           VerticalAlignment="Bottom">
+                </TextBlock>
+
+                <TextBox x:Name="txtTelefono" Height="30" 
+                         Width="150" 
+                         Grid.Row="1"
+                         Grid.Column="2"
+                         HorizontalAlignment="Left"
+                         Style="{DynamicResource RoundTxtBox}" Margin="0,6">
+
+                </TextBox>
 
                 <Button Grid.Column="0"
                         Grid.Row="2"
@@ -156,7 +173,7 @@
                         Grid.Row="2"
                         Background="#FFF"
                         Height="40"
-                        Width="130"
+                        Width="150"
                         HorizontalAlignment="Left"
                         Style="{DynamicResource RoundButton}">
 
