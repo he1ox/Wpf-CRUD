@@ -72,7 +72,7 @@ namespace crudWPF.PL {
             {
             case 1:
             
-            #line 272 "..\..\..\PL\VentanaProducto.xaml"
+            #line 291 "..\..\..\PL\VentanaProducto.xaml"
             ((System.Windows.Controls.Button)(target)).Click += new System.Windows.RoutedEventHandler(this.btnVolver);
             
             #line default
