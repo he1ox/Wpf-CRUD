@@ -43,12 +43,14 @@ namespace crudWPF.PL
 
 
 
+
         private void btnAgregar(object sender, RoutedEventArgs e)
         {
             oProveedor.Agregar(RecuperarInfo());
             MessageBox.Show($"{RecuperarInfo().nombre} ha sido agregado.","Proveedor");
             GridUpdate();
         }
+
 
 
         //Funciones
@@ -73,6 +75,6 @@ namespace crudWPF.PL
             return oProveedorBLL;
 
         }
-
+        //End Funciones
     }
 }
