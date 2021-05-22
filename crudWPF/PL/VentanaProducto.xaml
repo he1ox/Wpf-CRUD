@@ -163,13 +163,35 @@
                 </TextBlock>
 
                 <TextBox Grid.Row="7"
-                         Grid.ColumnSpan="3"
+                         Grid.ColumnSpan="1"
                          Style="{DynamicResource RoundTxtBox}"
                          VerticalContentAlignment="Center"
                          FontSize="20"
                          FontFamily="#archivo"
                          FontWeight="Light">
                 </TextBox>
+
+                <TextBlock Grid.Row="6"
+                           Grid.Column="2"
+                           Text="Fecha de Ingreso:"
+                           Style="{StaticResource stockFont}"
+                           VerticalAlignment="Center" Height="24" Margin="0,11,0,9">
+                </TextBlock>
+
+                
+                <!--CAMBIAR POR UN DATAPICKER-->
+                <TextBox Grid.Row="7"
+                         Grid.Column="2"
+                         Style="{DynamicResource RoundTxtBox}"
+                         VerticalContentAlignment="Center"
+                         FontSize="20"
+                         FontFamily="#archivo"
+                         FontWeight="Light">
+                </TextBox>
+                <!--CAMBIAR POR UN DATAPICKER-->
+
+
+
 
             </Grid>
         </Grid>

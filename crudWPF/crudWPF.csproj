@@ -105,6 +105,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\baseBLL.cs" />
+    <Compile Include="BLL\productosBLL.cs" />
+    <Compile Include="BLL\proveedoresBLL.cs" />
     <Compile Include="DAL\conexionsql.cs" />
     <Compile Include="PL\choosingAction.xaml.cs">
       <DependentUpon>choosingAction.xaml</DependentUpon>
