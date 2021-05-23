@@ -14,6 +14,7 @@ using System.Windows.Shapes;
 using crudWPF.DAL;
 using crudWPF.BLL;
 using System.Data;
+using System.IO;
 
 namespace crudWPF.PL
 {
@@ -219,9 +220,49 @@ namespace crudWPF.PL
 
         private void btnCSV(object sender, RoutedEventArgs e)
         {
-            //DataSet csv = oProductoDAL.MostrarProductos();
-            //int countRows = csv.Tables[0].Rows.Count;
-            //int countCells = csv.Tables[0].Rows
+
+            // Instancia de conexion a gestor
+            conexionsql conexion = new conexionsql();
+
+            //Instancia de tabla para pasarla a la funcion 
+            var Table = conexion.consultaTablaDirecta("SELECT * FROM productos");
+
+            //Generar archivo de texto
+            if (GenerateFile(Table))
+            {
+                MessageBox.Show("El archivo csv se ha guardado en tus documentos",".CSV Creado");
+            }
+            else
+            {
+                MessageBox.Show("No se ha generado ningun archivo.", "Error");
+            }
+        }
+
+
+
+        public bool GenerateFile(DataTable datosTabla)
+        {
+            try
+            {
+                int i = 0; //Iterador para foreach
+
+                string content = "ID;NOMBRE;CANTIDAD;DESCRIPCION;PRECIO;FECHA DE INGRESO;\n"; //Encabezado + iterador de strings
+
+                foreach (DataRow fila in datosTabla.Rows)
+                {
+                    content += ($"{fila[0]};{fila[1]};{fila[2]};{fila[3]};{fila[4]};{fila[5]};\n");
+                    i++;
+                }
+
+                File.WriteAllText($@"C:\Users\georg\csv{i}.csv", content);
+
+                return true;
+            }
+            catch 
+            {
+                return false;
+            }
+            
         }
     }
 }
