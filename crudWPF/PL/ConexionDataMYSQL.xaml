@@ -12,12 +12,7 @@
         <TextBlock HorizontalAlignment="Center"  TextWrapping="Wrap" Text="INGRESO A LA BASE DE DATOS" 
                    VerticalAlignment="Top" FontFamily="IMPACT" FontWeight="Light"  Foreground="#ffce00" 
                    FontSize="40" Width="474" Margin="10,31,10,0" TextAlignment="Center"/>
-        <!--end Encabezado-->
-        <!--end Servidor y TxtBox-->
-        <!--end Puerto y TxtBox-->
-        <!--end Usuario y Txtbox-->
-        <!--end pass y txtbox-->
-        <!--end bd name y txtbox-->
+        
         <Button x:Name="botonConectar" Content="CONECTAR" HorizontalAlignment="Left" Margin="98,189,0,0" VerticalAlignment="Top" Width="299" Height="135"
                 Style="{DynamicResource RoundButton}" FontFamily="IMPACT" FontSize="20" Background="#89119d" BorderBrush="#fff" 
                 Foreground="#ffce00" BorderThickness="3" Click="btnConexion" >
@@ -26,8 +21,5 @@
             </Button.Effect>
         </Button>
 
-
-
-        <!--end button Conectar-->
     </Grid>
 </Window>
