@@ -23,6 +23,7 @@
 
 * [MySQL](https://www.mysql.com/) - MySQL es un sistema de gestión de bases de datos relacional desarrollado bajo licencia dual: Licencia pública general/Licencia comercial por Oracle Corporation y está considerada como la base de datos de código abierto más popular del mundo
 
+* [Importacion de .sql](https://github.com/he1ox/Wpf-CRUD/blob/main/bd-import/InfoDATABASE.sql) - El archivo contiene las sentencias para la creacion de la base de datos en tu gestor de base de datos.
 
 ## Autores ✒️
 
@@ -39,7 +40,7 @@ https://github.com/he1ox/Wpf-CRUD.git
 <img align="center" src="https://github.com/he1ox/Wpf-CRUD/blob/main/presentation-github/captura2.png" alt="img" />
 <img align="center" src="https://github.com/he1ox/Wpf-CRUD/blob/main/presentation-github/captura3.png" alt="img1" />
 <img align="center" src="https://github.com/he1ox/Wpf-CRUD/blob/main/presentation-github/captura1.png" alt="img1" />
-
+<img align="center" src="https://github.com/he1ox/Wpf-CRUD/blob/main/presentation-github/captura4.png" alt="bd" />
 
 
 ⌨️  Bendiciones!
