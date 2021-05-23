@@ -204,8 +204,8 @@
                       Height="165" 
                       Margin="0,10,0,0" 
                       VerticalAlignment="Top" 
-                      Width="740" 
-                      SelectedCellsChanged="dgvProveedores_SelectedCellsChanged"  
+                      Width="auto" 
+                      SelectedCellsChanged="dgvProveedores_SelectedCellsChanged"
                       >
 
             </DataGrid>

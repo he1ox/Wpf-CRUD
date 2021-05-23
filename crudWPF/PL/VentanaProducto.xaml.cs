@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using crudWPF.DAL;
 using crudWPF.BLL;
+using System.Data;
 
 namespace crudWPF.PL
 {
@@ -79,8 +80,10 @@ namespace crudWPF.PL
             oProductosBLL.cantidad = cant;
 
 
-            int IDProveedor = 0;
+            int IDProveedor = 1;
+
             int.TryParse(cbxProveedor.SelectedValue.ToString(), out IDProveedor);
+
             oProductosBLL.proveedor = IDProveedor;
 
 
@@ -109,6 +112,18 @@ namespace crudWPF.PL
 
         }
 
+        private productosBLL RecolectarID()
+        {
+            productosBLL oProductosBLL = new productosBLL();
+
+            int idproducto = 1;
+
+            int.TryParse(txtID.Text, out idproducto);
+
+            oProductosBLL.id = idproducto;
+
+            return oProductosBLL;
+        }
 
 
 
@@ -136,6 +151,77 @@ namespace crudWPF.PL
             fechaPicker.SelectedDate = null;
         }
 
+        private void btnBorrar(object sender, RoutedEventArgs e)
+        {
+            bool opcionBorrar = MensajePregunta("Eliminar", txtID);
+            if (opcionBorrar)
+            {
+                oProductoDAL.Eliminar(RecolectarID());
+                UpdateGrid();
+                LimpiarEntradas();
+            }
+        }
 
+
+
+        private bool MensajePregunta(string opcion, TextBox txtbox)
+        {
+            string msj = $"Deseas {opcion} el proveedor con ID {txtbox.Text}?";
+            string msjcaption = $"{opcion} registro";
+
+            MessageBoxButton botones = MessageBoxButton.YesNo;
+
+            var result = MessageBox.Show(msj, msjcaption, botones, MessageBoxImage.Exclamation);
+
+            if (result == MessageBoxResult.Yes)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
+
+        private void btnModificar(object sender, RoutedEventArgs e)
+        {
+            bool opcionModificar = MensajePregunta("Modificar",txtID);
+            if (opcionModificar)
+            {
+                oProductoDAL.Modificar(RecolectarDatos());
+                UpdateGrid();
+                LimpiarEntradas();
+            }
+
+        }
+
+        private void btnCancelar(object sender, RoutedEventArgs e)
+        {
+            LimpiarEntradas();
+        }
+
+        private void btnBuscar(object sender, RoutedEventArgs e)
+        {
+            int idBuscar = 1;
+
+            int.TryParse(txtID.Text, out idBuscar);
+
+            DataSet Busqueda = oProductoDAL.BuscarPorID(idBuscar);
+
+            dgvProductos.DataContext = Busqueda.Tables[0];
+        }
+
+        private void btnRestart(object sender, RoutedEventArgs e)
+        {
+            UpdateGrid();
+        }
+
+        private void btnCSV(object sender, RoutedEventArgs e)
+        {
+            //DataSet csv = oProductoDAL.MostrarProductos();
+            //int countRows = csv.Tables[0].Rows.Count;
+            //int countCells = csv.Tables[0].Rows
+        }
     }
 }

@@ -26,20 +26,40 @@ namespace crudWPF.DAL
             return conexion.EjecutarSentencia(SQLComando);
         }
 
+        public DataSet BuscarPorID(int id)
+        {
+            MySqlCommand SQLComando = new MySqlCommand($"SELECT * FROM productos WHERE ID={id}");
+            return conexion.EjecutarSentencia(SQLComando);
+        }
+
         public bool Agregar(productosBLL oProducto)
         {
 
-            MySqlCommand SQLComando = new MySqlCommand($"INSERT INTO productos VALUES({oProducto.id},'{oProducto.nombre}',{oProducto.cantidad},'{oProducto.descripcion}',{oProducto.precio},'{oProducto.fechaIngreso}')");
-
-            //SQLComando.Parameters.Add("@id", MySqlDbType.Int32).Value = oProducto.id;
-            //SQLComando.Parameters.Add("@nombre", MySqlDbType.VarChar).Value = oProducto.nombre;
-            //SQLComando.Parameters.Add("@cantidad", MySqlDbType.Int32).Value = oProducto.cantidad;
-            //SQLComando.Parameters.Add("@descripcion", MySqlDbType.VarChar).Value = oProducto.descripcion;
-            //SQLComando.Parameters.Add("@precio", MySqlDbType.Int32).Value = oProducto.precio;
-            //SQLComando.Parameters.Add("@fecha", MySqlDbType.VarChar).Value = oProducto.fechaIngreso;
+            MySqlCommand SQLComando = new MySqlCommand($"INSERT INTO productos VALUES({oProducto.id}," +
+                                                        $"'{oProducto.nombre}',{oProducto.cantidad}," +
+                                                        $"'{oProducto.descripcion}',{oProducto.precio}," +
+                                                        $"'{oProducto.fechaIngreso}')");
 
             return conexion.execSinRetornoDatos(SQLComando);
         }
+
+        public int Eliminar(productosBLL oProductoBLL)
+        {
+            conexion.execSinRetornoDatos($"DELETE FROM productos WHERE id={oProductoBLL.id}");
+
+            return 1;
+        }
+
+        public int Modificar(productosBLL oProductosBLL)
+        {
+            conexion.execSinRetornoDatos($"UPDATE productos SET nombre='{oProductosBLL.nombre}', " +
+                                        $"cantidad={oProductosBLL.cantidad}, descripcion='{oProductosBLL.descripcion}'," +
+                                        $"precio={oProductosBLL.precio}, fechaIngreso = '{oProductosBLL.fechaIngreso}'" +
+                                        $"WHERE ID = {oProductosBLL.id}");
+
+            return 1;
+        }
+
 
     }
 }
