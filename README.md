@@ -33,7 +33,7 @@
 
 ## Pruebalo 🔧
 ```
-https://github.com/he1ox/Wpf-CRUD.git
+git clone https://github.com/he1ox/Wpf-CRUD.git
 ```
 
 ## Presentación 🚀
