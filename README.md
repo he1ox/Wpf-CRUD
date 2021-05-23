@@ -36,9 +36,10 @@ https://github.com/he1ox/Wpf-CRUD.git
 ```
 
 ## Presentación 🚀
-<img align="center" src="https://github.com/he1ox/Wpf-CRUD/blob/main/presentation-github/captura1.png" alt="img1 >
-<img align="center" src="https://github.com/he1ox/Wpf-CRUD/blob/main/presentation-github/captura2.png" alt="img" >
-<img align="center" src="https://github.com/he1ox/Wpf-CRUD/blob/main/presentation-github/captura3.png" alt="img1 >
+<img align="center" src="https://github.com/he1ox/Wpf-CRUD/blob/main/presentation-github/captura2.png" alt="img" />
+<img align="center" src="https://github.com/he1ox/Wpf-CRUD/blob/main/presentation-github/captura3.png" alt="img1" />
+<img align="center" src="https://github.com/he1ox/Wpf-CRUD/blob/main/presentation-github/captura1.png" alt="img1" />
+
 
 
 ⌨️  Bendiciones!
