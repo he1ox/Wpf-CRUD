@@ -40,13 +40,7 @@ namespace crudWPF.PL
 
         private void limpiarEntradas()
         {
-            //Limpia las entradas de los textbox.
-            txtContrasena.Text = "";
-            txtNombreBD.Text = "";
-            txtPuerto.Text = "";
-            txtPuerto.Text = "";
-            txtServidor.Text = "";
-            txtUsuario.Text = "";
+            //
         }
 
 
