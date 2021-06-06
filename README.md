@@ -29,7 +29,7 @@
 
 * **Jorge Lopez** - *Gestión y presentación del proyecto* - [GitHub](https://github.com/he1ox)
 * **Luis Garcia** - *Caracteristicas* - [GitHub](https://github.com/LuisG852)
-* **Elian Navas** - *Testing* 
+* **Elian Navas** - Participación casi *NULA*
 
 ## Pruebalo 🔧
 ```
